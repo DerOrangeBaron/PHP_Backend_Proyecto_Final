@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class PagesController extends Controller
 {
     
     public function showHome()
@@ -16,15 +16,12 @@ class HomeController extends Controller
     {
     	# code...
     }
-
-    public function showReserve(Request $request)
+    
+    public function sendContact()
     {
-    	# code...
+        //
     }
 
-    public function reserve(Request $request)
-    {
-        # code...
-    }
+    
 }
 

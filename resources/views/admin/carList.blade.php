@@ -12,6 +12,7 @@
 			        	<thead>
 			        		<tr>
 			        			<th>Id</th>
+								<th>Imagen</th>
 			        			<th>Marca</th>
 			        			<th>Modelo</th>
 			        			<th>Acciones</th>
@@ -22,6 +23,7 @@
 			        			<td>1</td>
 			        			<td>Audi</td>
 			        			<td>Q6</td>
+								<td><img src="/img/audi_1.jpg" style="max-height:50px; max-width:50px"/></td>
 			        			<td>
 			        				<a class="btn btn-primary btn-sm" href="">Editar</a>
 			        				<a class="btn btn-danger btn-sm" href="">Eliminar</a>
@@ -31,7 +33,8 @@
 			        			<td>1</td>
 			        			<td>Audi</td>
 			        			<td>Q6</td>
-			        			<td>
+								<td><img src="/img/audi_1.jpg" style="max-height:50px; max-width:50px"/></td>
+								<td>
 			        				<a class="btn btn-primary btn-sm" href="">Editar</a>
 			        				<a class="btn btn-danger btn-sm" href="">Eliminar</a>
 			        			</td>
@@ -40,7 +43,8 @@
 			        			<td>1</td>
 			        			<td>Audi</td>
 			        			<td>Q6</td>
-			        			<td>
+								<td><img src="/img/audi_1.jpg" style="max-height:50px; max-width:50px"/></td>
+								<td>
 			        				<a class="btn btn-primary btn-sm" href="">Editar</a>
 			        				<a class="btn btn-danger btn-sm" href="">Eliminar</a>
 			        			</td>

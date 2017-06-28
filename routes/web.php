@@ -13,38 +13,39 @@
 
 // ----  RUTAS DE ADMINISTRADOR ------ //
 
-Route::get('admin/autos', 'CarController@showList');
+Route::get('admin/autos', 'AdminCarController@index');
 
-Route::get('admin/autos/{id}', 'CarController@showEdit');
+Route::get('admin/autos/crear', 'AdminCarController@create');
 
-Route::post('admin/autos/editar', 'CarController@edit');
+Route::post('admin/autos/crear', 'AdminCarController@store');
 
-Route::get('admin/autos/crear', 'CarController@showCreate');
+Route::get('admin/autos/{id}', 'AdminCarController@edit');
 
-Route::post('admin/autos/crear', 'CarController@create');
+Route::post('admin/autos/{id}/editar', 'AdminCarController@update');
 
-Route::get('admin/autos/{id}/eliminar', 'CarController@deleteCar');
+Route::get('admin/autos/{id}/eliminar', 'AdminCarController@delete');
 
-Route::get('admin/marcas', 'BrandController@showList');
+Route::get('admin/marcas', 'BrandController@adminList');
 
-Route::get('admin/modelos', 'ModelController@showList');
+Route::get('admin/modelos', 'ModelController@adminList');
+
 
 
 
 
 // ----  RUTAS PUBLICAS ------ //
 
-Route::get('', 'HomeController@showHome');
+Route::get('', 'PagesController@index');
 
-Route::get('nosotros', 'HomeController@showAboutUs');
+Route::get('nosotros', 'PagesController@showAboutUs');
 
-Route::post('contacto', 'HomeController@sendContact');
+Route::post('contacto', 'PagesController@sendContact');
 
-Route::get('ventas', 'CarController@showSales');
+Route::get('ventas', 'CarController@sales');
 
-Route::get('reservar/{id}', 'HomeController@showReserve');
+Route::get('reservar/{id}', 'CarController@showReserve');
 
-Route::post('reservar', 'HomeController@reserve');
+Route::post('reservar/{id}', 'CarController@reserve');
 
 Route::get('test', function() {
     return view('web.sales');

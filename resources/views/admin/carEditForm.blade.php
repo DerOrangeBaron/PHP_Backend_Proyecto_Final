@@ -11,22 +11,17 @@
 		        	<form method="POST" action="" enctype="multipart/form-data">
 		        		
 		        		<div class="form-group row">
-		        			<div class="col-md-4">
+		        			<div class="col-md-6">
 		        				<label for="year">Año</label>
 								<select class="form-control" name="year">
 									<option value="">Seleccionar...</option>
-									@for ($i = 2017; $i >= 1900; $i--)
-									<option value="{$i}}">{{ $i }}</option>
+									@for ($i = 2017; $i >= 1980; $i--)
+									    <option value="{{$i}}">{{ $i }}</option>
 									@endfor
 								</select>
 		        			</div>
-		        			<div class="col-md-4">
-		        				<label for="brand">Marca</label>
-								<select class="form-control" name="brand">
-									<option value="">Seleccionar...</option>
-								</select>
-		        			</div>
-		        			<div class="col-md-4">
+
+		        			<div class="col-md-6">
 		        				<label for="model">Modelo</label>
 								<select class="form-control" name="model">
 									<option value="">Seleccionar...</option>
@@ -49,9 +44,11 @@
 						</div>
 
 						<div class="form-group row">
-							<div class="col-md-4">
+							<div class="col-md-6">
 								<label for="photo">Foto</label>
 								<input type="file" name="photo">
+
+                                <img src="" alt="" style="max-width: 100px;max-height: 100px;">
 							</div>
 						</div>
 

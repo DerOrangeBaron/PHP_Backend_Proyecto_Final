@@ -47,10 +47,10 @@
                             <li><a href="/register">Register</a></li>
                         @else
                             <li>
-                                <a href="/admin/posts">Listado Admin</a>
+                                <a href="/admin/autos">Listado Autos</a>
                             </li>
                             <li>
-                                <a href="/admin/posts/crear">Crear Post</a>
+                                <a href="/admin/autos/crear">Crear Auto</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -76,6 +76,11 @@
                 </div>
             </div>
         </nav>
+
+
+
+        @include('sections.alerts')
+
 
         @yield('content')
     </div>

@@ -27,41 +27,8 @@
 
 <body>
 
-    <nav id="header" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">
-					<img id="header-logo" src="/img/automotora_vip_logo.png" alt="AutoVIP" />
-				</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="">Home</a>
-                    </li>
-                    <li>
-                        <a href="">Ventas</a>
-                    </li>
-					<li>
-                        <a href="">Sobre Nosotros</a>
-                    </li>
-                    <li>
-						<a href="#" data-toggle="modal" data-target="#contacto-modal">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+	@include('sections.header')
+    @include('sections.alerts')
 
 
 
@@ -69,65 +36,10 @@
 
 
 
-	<div id="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3">
-					<img id="footer-logo" src="/img/automotora_vip_logo.png" alt="AutoVIP" />
-
-				</div><!-- /.col -->
-				<div class="col-md-3">
-					<ul>
-						<li><a href="">Home</a></li>
-						<li><a href="">Ventas</a></li>
-					</ul>
-				</div><!-- /.col -->
-				<div class="col-md-3">
-					<ul>
-						<li><a href="">Sobre Nosotros</a></li>
-						<li><a href="#" data-toggle="modal" data-target="#contacto-modal">Contacto</a></li>
-					</ul>
-				</div><!-- /.col -->
-				<div class="col-md-3">
-					<p style="color:#DDD;">Copyright &copy; AutoVIP 2017</p>
-				</div><!-- /.col -->
-			</div><!-- /.row -->
-
-		</div><!-- /.container -->
-	</div><!-- /#footer -->
-
-	<div id="contacto-modal" class="modal fade" tabindex="-1" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title">Contacto</h4>
-				</div>
-				<div class="modal-body">
-					<form action="https://formspree.io/your@email.com" method="POST">
-						<div class="form-group">
-							<label for="name">Nombre</label>
-							<input type="text" name="name" value="" class="form-control" placeholder="Ingresar nombre completo...">
-						</div><!-- /.form-group -->
-						<div class="form-group">
-							<label for="email">Email</label>
-							<input type="email" name="_replyto" value="" class="form-control" placeholder="Ingresar Email...">
-						</div><!-- /.form-group -->
-						<div class="form-group">
-							<label for="message">Mensaje</label>
-							<textarea name="message" rows="8" cols="40" class="form-control" placeholder="Ingresar mensaje..."></textarea>
-						</div><!-- /.form-group -->
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-success" data-dismiss="modal">Enviar</button>
-				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
+	@include('sections.footer')
 
 
-
+	@include('sections.contactModel')
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -18,30 +18,34 @@ Ventas
 			<div class="col-md-2">
 				<div id="filter">
 					<h4>Filtro</h4>
-					<form method="POST" action="">
+					<form method="GET" action="">
 						<div class="form-group">
 							<label for="year">Año</label>
 							<select id="select-year" class="form-control input-sm" name="year">
 								<option value="">Seleccionar...</option>
-								@for ($i = 2017; $i >= 1900; $i--)
-								<option value="{$i}}">{{ $i }}</option>
+								@for ($i = 2017; $i >= 1980; $i--)
+								<option value="{{$i}}">{{ $i }}</option>
 								@endfor
 							</select>
 						</div>
 
 						<div class="form-group">
 							<label for="brand">Marca</label>
-							<select id="select-brand" class="form-control input-sm" name="brand">
+							<select id="select-brand" class="form-control input-sm" name="brand_id">
 								<option value="">Seleccionar...</option>
 							</select>
 						</div>
 
 						<div class="form-group">
 							<label for="model">Modelo</label>
-							<select id="select-model" class="form-control input-sm" name="model">
+							<select id="select-model" class="form-control input-sm" name="model_id">
 								<option value="">Seleccionar...</option>
 							</select>
 						</div>
+                        <div class="form-group">
+                            <label for="model">Texto</label>
+                            <input id="text-search" class="form-control input-sm" name="q">
+                        </div>
 
 						<button id="btn-filter" type="submit" name="button" class="btn btn-warning btn-sm btn-block"><i class="fa fa-search" aria-hidden="true"></i> Filtrar</button>
 					</form>
