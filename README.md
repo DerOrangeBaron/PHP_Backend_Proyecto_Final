@@ -76,12 +76,12 @@ Para instalar el proyecto seguir los siguientes pasos:
 
 
 
-2. Instalar dependencias (/vendor) utilizando Composer desde  consola. Ejecutar comando: ``composer install``
+2. Instalar dependencias (/vendor) utilizando Composer desde  consola. Ejecutar comando: ``composer install``.
 
 
 
 
-3. Crear una base de datos utilizando phpMyAdmin llamada ``HA_Proyecto_Final``
+3. Crear una base de datos utilizando phpMyAdmin llamada ``HA_Proyecto_Final`` (con cotejamineto ``utf8mb4_unicode_ci``).
 
 
 
@@ -91,17 +91,17 @@ Para instalar el proyecto seguir los siguientes pasos:
 
 
 
-5. Editar los valores de ``DB_USERNAME`` y ``DB_PASSWORD`` según corresponda de acuerdo al sistema del usuario. Normalmente se utiliza ``DB_USERNAME=root`` y ``DB_PASSWORD=(vacío)``
+5. Editar los valores de ``DB_USERNAME`` y ``DB_PASSWORD`` según corresponda de acuerdo al sistema del usuario. Normalmente se utiliza ``DB_USERNAME=root`` y ``DB_PASSWORD=(vacío)``.
 
 
 
 
-6. Installar el paquete Laravel Debugbar (Buscarlo en Google)
+6. Installar el paquete Laravel Debugbar (Buscarlo en Google).
 
 
 
 
-7. Levantar servidor utilizando el comando: ``php artisan serve``
+7. Levantar servidor utilizando el comando: ``php artisan serve``.
 
 
 
@@ -134,17 +134,17 @@ Se incluyen además los siguientes seeds auxiliares que permiten insertar regist
 
 
 
-1. Implementar funcionalidades para admin:
-   * Agregar autenticación (registro y login de usuarios)
-   * Proteger las rutas que comienzan con ``/admin``
-   * Crear modelo ``Car``,
-   * Crear migración para crear la tabla ``cars``, La cual debe tener: `year, model, price, description, photo, created_at, updated_at`
+1. Implementar funcionalidades para la sección Admin del sitio:
+   * Agregar autenticación (registro y login de usuarios).
+   * Proteger las rutas que comienzan con ``/admin``.
+   * Crear modelo ``Car``.
+   * Crear migración para crear la tabla ``cars``, la cual debe tener: `year, model, price, description, photo, created_at, updated_at`.
    * Ejecutar seed para rellenar tabla de autos, ejecutando `php artisan db:seed --class=CarsTableSeeder`
-   * Implementar el listado de `cars`, en el Admin
-   * Implementar ABM (Alta, Baja y Modificación de autos). Recordar que al editar una `car`, si la imagen se modifica hay que eliminar la imagen anterior
+   * Implementar el listado de `cars`, en el Admin.
+   * Implementar ABM (Alta, Baja y Modificación de autos). Recordar que al editar una `car`, si la imagen se modifica hay que eliminar la imagen anterior.
 
 
-2. Implementar funciones para sitio público
+2. Implementar funcionalidades para sección pública sitio:
    * Implementar las páginas estáticas del sitio: `Home`, `About Us`
    * Implementar la sección ventas
      * Listado de autos con paginado.
@@ -155,11 +155,11 @@ Se incluyen además los siguientes seeds auxiliares que permiten insertar regist
      * Se debe eliminar el auto de forma lógica.
 
 
-3. Implementar una API REST
-   * Listado de autos. Se debe poder utilizar los mismos filtros que en el buscador de la web
-   * Detalle de un auto
-   * Listado de Marcas
-   * Listado de Modelos
+3. Implementar una API REST:
+   * Listado de autos. Se debe poder utilizar los mismos filtros que en el buscador de la web.
+   * Detalle de un auto.
+   * Listado de Marcas.
+   * Listado de Modelos.
 
 
 
