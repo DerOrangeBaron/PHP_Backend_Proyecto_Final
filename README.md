@@ -122,42 +122,41 @@ Se incluyen además los siguientes seeds auxiliares que permiten insertar regist
 
 
 
-## Ejercicio (POR TERMINAR...)
+## Ejercicio
 
 
 
 
 1. Implementar funcionalidades para admin:
- * Agregar autenticación (registro y login de usuarios)
- * Proteger las rutas que comienzan con ``/admin``
- * Crear modelo ``Car``,
- * Crear migración para crear la tabla ``cars``, La cual debe tener: `year, model, price, description, photo, created_at, updated_at`
- * Ejecutar seed para rellenar tabla de autos, ejecutando `php artisan db:seed --class=CarsTableSeeder`
- * Implementar el listado de `cars`, en el Admin
- * Implementar ABM (Alta, Baja y Modificación de autos). Recordar que al editar una `car`, si la imagen se modifica hay que eliminar la imagen anterior
+   * Agregar autenticación (registro y login de usuarios)
+   * Proteger las rutas que comienzan con ``/admin``
+   * Crear modelo ``Car``,
+   * Crear migración para crear la tabla ``cars``, La cual debe tener: `year, model, price, description, photo, created_at, updated_at`
+   * Ejecutar seed para rellenar tabla de autos, ejecutando `php artisan db:seed --class=CarsTableSeeder`
+   * Implementar el listado de `cars`, en el Admin
+   * Implementar ABM (Alta, Baja y Modificación de autos). Recordar que al editar una `car`, si la imagen se modifica hay que eliminar la imagen anterior
 
 
 2. Implementar funciones para sitio público
- * Implementar las páginas simples del sitio `Home`, `About Us`
- * Implementar la sección ventas
-   * Listado de autos, con paginado.
-   * Filtro de autos en pantalla ``/ventas``
- * Implementar la reserva de auto
-   * Mostrar el formulario, con el detalle del auto seleccionado
-   * Al enviar el formulario, se debe mandar un email con la información de la persona.
+   * Implementar las páginas estáticas del sitio: `Home`, `About Us`
+   * Implementar la sección ventas
+     * Listado de autos con paginado.
+     * Filtrado de autos en pantalla ``/ventas``
+   * Implementar la reserva de auto
+     * Mostrar el formulario con el detalle del auto seleccionado ``(id)``
+     * Al enviar el formulario, se debe mandar un email con la información de la persona.
    * Se debe eliminar el auto de forma lógica.
 
 
 3. Implementar una API REST
- * Con listado de autos, se debe poder utilizar los mismos filtros que en el buscador
- * Detalle de un auto
- * Listado de Marcas
- * Listado de Modelos
+   * Listado de autos. Se debe poder utilizar los mismos filtros que en el buscador de la web
+   * Detalle de un auto
+   * Listado de Marcas
+   * Listado de Modelos
 
 
 
 
 :muscle: :smile:
-
 
 
