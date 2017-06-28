@@ -43,14 +43,32 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="/ventas">Ventas</a>
+                            </li>
+                            <li>
+                                <a href="/nosotros">Sobre Nosotros</a>
+                            </li>
                             <li><a href="/login">Login</a></li>
                             <li><a href="/register">Register</a></li>
                         @else
+                            <li>
+                                <a href="/">Sitio</a>
+                            </li>
                             <li>
                                 <a href="/admin/autos">Listado Autos</a>
                             </li>
                             <li>
                                 <a href="/admin/autos/crear">Crear Auto</a>
+                            </li>
+                            <li>
+                                <a href="/admin/marcas">Listado Marcas</a>
+                            </li>
+                            <li>
+                                <a href="/admin/modelos">Listado Modelos</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
