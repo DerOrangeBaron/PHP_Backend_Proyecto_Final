@@ -42,5 +42,15 @@ class CarController extends Controller
     	# code...
     }
 
+
+    public function carDetailJson($id)
+    {
+        # code...
+    }
+
+    public function listCarsJson($id)
+    {
+        # code...
+    }
 }
 

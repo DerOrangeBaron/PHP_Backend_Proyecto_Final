@@ -21,7 +21,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
 
 	<!-- CSS Propio -->
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="/css/styles.css">
 
 </head>
 
@@ -38,17 +38,17 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html">
-					<img id="header-logo" src="img/automotora_vip_logo.png" alt="AutoVIP" />
+					<img id="header-logo" src="/img/automotora_vip_logo.png" alt="AutoVIP" />
 				</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="">Venta 0km</a>
+                        <a href="">Home</a>
                     </li>
-					<li>
-                        <a href="">Venta Usados</a>
+                    <li>
+                        <a href="">Ventas</a>
                     </li>
 					<li>
                         <a href="">Sobre Nosotros</a>
@@ -73,13 +73,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3">
-					<img id="footer-logo" src="img/automotora_vip_logo.png" alt="AutoVIP" />
+					<img id="footer-logo" src="/img/automotora_vip_logo.png" alt="AutoVIP" />
 
 				</div><!-- /.col -->
 				<div class="col-md-3">
 					<ul>
-						<li><a href="">Venta 0km</a></li>
-						<li><a href="">Venta Usados</a></li>
+						<li><a href="">Home</a></li>
+						<li><a href="">Ventas</a></li>
 					</ul>
 				</div><!-- /.col -->
 				<div class="col-md-3">

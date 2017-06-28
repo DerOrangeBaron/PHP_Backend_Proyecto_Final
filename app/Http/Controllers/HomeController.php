@@ -17,9 +17,14 @@ class HomeController extends Controller
     	# code...
     }
 
-    public function sendContact(Request $request)
+    public function showReserve(Request $request)
     {
     	# code...
+    }
+
+    public function reserve(Request $request)
+    {
+        # code...
     }
 }
 

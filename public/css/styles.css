@@ -188,3 +188,20 @@ h1, h2, h3, h4, h5, h6 {
 #footer ul li a:visited {
 	color: #EEEEEE;
 }
+
+
+/*****************************************************************
+
+    RESERVAS
+
+/*****************************************************************/
+
+.jumbotron{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.jumbotron h4{
+	margin-bottom: 20px;
+	text-decoration: underline;
+}

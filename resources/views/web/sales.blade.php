@@ -53,11 +53,11 @@ Ventas
 
 			<div class="col-md-10">
 
-				<div class="alert alert-warning hidden" role="alert" v-show="!cars_filtered.length">
+				<div class="alert alert-warning hidden" role="alert">
 					Lo sentimos, no hay autos para el criterio de búsqueda seleccionado.
 				</div>
 
-				<div class="car" v-for="item in cars_filtered">
+				<div class="car" >
 					<img src="/img/audi_1.jpg" />
 					<h3>
 						Audi Q6
@@ -74,9 +74,8 @@ Ventas
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</p>
 					<div class="car-footer">
-						<button type="button" name="button" class="btn btn-success btn-sm"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Comprar</button>
-						<button type="button" name="button" class="btn btn-default btn-sm">Más información</button>
-						<button type="button" name="button" class="btn btn-default btn-sm">Comparar</button>
+						<a type="button" name="button" class="btn btn-success btn-sm"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Reservar</a>
+						<a type="button" name="button" class="btn btn-default btn-sm">Más información</a>
 					</div>
 				</div><!-- /.car -->
 

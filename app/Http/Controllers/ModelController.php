@@ -12,4 +12,9 @@ class ModelController extends Controller
     	$models = BrandModel::all();
     	return view('admin.modelsList', ['models' => $models]);
     }
+
+    public function listModelsJson()
+    {
+    	# code...
+    }
 }

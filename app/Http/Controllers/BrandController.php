@@ -12,4 +12,9 @@ class BrandController extends Controller
     	$brands = Brand::all();
     	return view('admin.brandsList', ['brands' => $brands]);
     }
+
+    public function listBrandsJson()
+    {
+    	# code...
+    }
 }
