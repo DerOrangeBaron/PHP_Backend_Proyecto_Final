@@ -52,7 +52,7 @@ GET 	| /marcas 		| BrandsController@listBrandsJson 	| Listar todas las marcas en
 
 Para instalar el proyecto seguir los siguientes pasos:
 
-1. Descargar y descomprimir ZIP con el proyecto. Navegar en consola hasta la carpeta del mismo.
+1. Utilizar `git clone https://github.com/Hack-UY/PHP_Backend_Proyecto_Final.git`, para descargar el proyecto
 
 
 2. Instalar dependencias (/vendor) utilizando Composer desde  consola. Ejecutar comando: ``composer install``
