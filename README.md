@@ -2,13 +2,15 @@
 
 ## Introducción
 
-El siguiente proyecto consiste en desarrollar el backend para una automotora. Separaremos el trabajo en 2 grandes partes:
+El siguiente proyecto consiste en desarrollar un sitio completo para la Automotora VIP. Separaremos el trabajo en 3 partes:
 
 * Sección privada (admin): Solamente los usuarios autenticados podrán crear, editar y modificar autos y marcas.
 
 
-* Sección publica: Sitio publico al visitante, donde se puede buscar autos por año, marca o modelo, asi como enviar consultas, o conocer acerca de la empresa.
+* Sección publica: Sitio publico al visitante, donde se puede buscar autos por año, marca o modelo, asi como reservar un auto, o conocer acerca de la empresa.
 
+
+* API para ser consumida por una aplicación externa.
 
 
 ## Rutas, Controladores y métodos
@@ -17,14 +19,14 @@ A continuación se detallan aquellas rutas privadas:
 
 Método 		| Ruta        				| Controlador@función 		| Descripción  						   |
 ------------| --------------------------|---------------------------| -------------------------------------|
-| GET  		| /admin/cars 				|CarController@showList 	|Mostrar listado de autos 			   |
-| GET  		| /admin/cars/{id} 			|CarController@showEdit		|Mostrar formulario para editar un auto|
-| POST  	| /admin/cars/edit 			|CarController@edit 		|Editar un auto 					   |
-| GET  		| /admin/cars/create 		|CarController@showCreate	|Mostrar formulario para crear auto    |
-| POST  	| /admin/cars/create 		|CarController@create 		|Crear un nuevo auto 				   |
-| GET  		| /admin/cars/{id}/eliminar |CarController@deleteCar	|Eliminar un auto 					   |
-| GET  		| /admin/brands 			|BrandController@showList	|Mostrar listado de marcas			   |
-| GET  		| /admin/models 			|ModelController@showList	|Mostrar listado de modelos 		   |
+| GET  		| /admin/autos 				|CarController@showList 	|Mostrar listado de autos 			   |
+| GET  		| /admin/autos/{id} 		|CarController@showEdit		|Mostrar formulario para editar un auto|
+| POST  	| /admin/autos/editar		|CarController@edit 		|Editar un auto 					   |
+| GET  		| /admin/autos/crear 		|CarController@showCreate	|Mostrar formulario para crear auto    |
+| POST  	| /admin/autos/crear 		|CarController@create 		|Crear un nuevo auto 				   |
+| GET  		| /admin/autos/{id}/eliminar|CarController@deleteCar	|Eliminar un auto 					   |
+| GET  		| /admin/marcas 			|BrandController@showList	|Mostrar listado de marcas			   |
+| GET  		| /admin/modelos 			|ModelController@showList	|Mostrar listado de modelos 		   |
 
 Rutas públicas:
 
@@ -32,10 +34,19 @@ Método 	| Ruta        	| Controlador@función 			| Descripción  						|
 ------	| ------------	|-------------------------------| ----------------------------------|
 GET 	| / 			| HomeController@showHome 		| Mostrar pantalla de inicio		|
 GET 	| /nosotros 	| HomeController@showAboutUs 	| Mostrar pantalla de nosotros		|
-POST	| /contacto 	| HomeController@sendContact 	| Procesar formulario de contacto	|
 GET 	| /ventas 		| CarController@showSales 		| Mostrar pantalla de ventas		|
+GET 	| /reservar/{id}| CarController@showSales 		| Mostrar pantalla de reserva 		|
+POST 	| /reservar		| CarController@showSales 		| Procesar reserva y enviar mail	|
 
- 
+Rutas API:
+
+Método 	| Ruta        	| Controlador@función 				| Descripción  						|
+------	| ------------	|-------------------------------	| ----------------------------------|
+GET 	| /autos		| CarController@listCarsJson 		| Listar todos los autos en JSON		|
+GET 	| /autos/{id}	| CarController@carDetailJson 		| Listar detalle de un auto en JSON		|
+GET 	| /modelos 		| ModelController@listModelsJson 	| Listar todos los modelos en JSON		|
+GET 	| /marcas 		| BrandsController@listBrandsJson 	| Listar todas las marcas en JSON		|
+
 
 ## Configuración
 
@@ -53,23 +64,20 @@ Para instalar el proyecto seguir los siguientes pasos:
 4. Revisar archivo .env (en la raiz del proyecto), y asegurarse que el valor de ``DB_DATABASE`` coincida con el nombre de la base de datos recien creada (``HA_Proyecto_Final``).
 
 
-5. Editar los valores de ``DB_USERNAME`` y ``DB_PASSWORD`` según corresponda de acuerdo al sistema del usuario.
+5. Editar los valores de ``DB_USERNAME`` y ``DB_PASSWORD`` según corresponda de acuerdo al sistema del usuario. Normalmente se utiliza ``DB_USERNAME=root`` y ``DB_PASSWORD=(vacio)``
 
 
-6. Correr migraciones para crear las tablas en la base de datos. Utilizar el comando: ``php artisan migrate``
-
-
-7. Levantar servidor utilizando el comando: ``php artisan serve``
+6. Levantar servidor utilizando el comando: ``php artisan serve``
 
 ## Migrations
 
-Se incluyen migraciones para crear las tablas ``brands``, ``models`` y ``users``. Para ejecutar las migraciones:
+Se incluyen migraciones para crear las tablas de ``brands``, ``models`` y ``users``. Para ejecutar estas migraciones:
 
 ``php artisan migrate``
 
 ## Seeds
 
-Se incluye en el ejercicio los siguientes seeds auxiliares quienes insertan registros en las tablas de la base de datos:
+Se incluyen además los siguientes seeds auxiliares que permiten insertar registros de prueba en las tablas de la base de datos:
 
  ``php artisan db:seed --class=BrandsTableSeeder`` (Inserta registros en la tabla brands)
 
@@ -78,11 +86,19 @@ Se incluye en el ejercicio los siguientes seeds auxiliares quienes insertan regi
 
 ## Ejercicio (POR TERMINAR...)
 
-1. Implementar funcionalidades para 
+1. Implementar funcionalidades para admin:
+  * Agregar autenticación (registro y login de usuarios)
+  * Proteger las rutas que comiencen con ``/admin``
+  * Crear modelo ``Car``
+  * Crear migración para crear la tabla ``cars``
+  * Ejecutar seed para rellenar tabla de autos (FALTA HACER!!)
+  * Implementar ABM (Alta, Baja y Modificación de autos)
 
-2. Item
+2. Implementar funciones para sitio publico
+  * Filtro de autos en pantalla ``/ventas``
+  * Reserva de auto con envío de mail
 
-3. 
+3. Implementar API
 
 
-
+:muscle: :smile:
