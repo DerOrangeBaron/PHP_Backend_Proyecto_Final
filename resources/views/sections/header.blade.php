@@ -17,16 +17,16 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="">Ventas</a>
+                    <a href="/ventas">Ventas</a>
                 </li>
                 <li>
-                    <a href="">Sobre Nosotros</a>
+                    <a href="/nosotros">Sobre Nosotros</a>
                 </li>
                 <li>
-                    <a href="#" data-toggle="modal" data-target="#contacto-modal">Contacto</a>
+                    <a href="" data-toggle="modal" data-target="#contacto-modal">Contacto</a>
                 </li>
             </ul>
         </div>

@@ -8,13 +8,13 @@
             </div><!-- /.col -->
             <div class="col-md-3">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Ventas</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/ventas">Ventas</a></li>
                 </ul>
             </div><!-- /.col -->
             <div class="col-md-3">
                 <ul>
-                    <li><a href="">Sobre Nosotros</a></li>
+                    <li><a href="/nosotros">Sobre Nosotros</a></li>
                     <li><a href="#" data-toggle="modal" data-target="#contacto-modal">Contacto</a></li>
                 </ul>
             </div><!-- /.col -->

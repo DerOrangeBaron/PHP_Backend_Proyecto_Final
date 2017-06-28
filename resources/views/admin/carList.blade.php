@@ -12,39 +12,29 @@
 			        	<thead>
 			        		<tr>
 			        			<th>Id</th>
+								<th>Imagen</th>
 			        			<th>Marca</th>
 			        			<th>Modelo</th>
 			        			<th>Acciones</th>
 			        		</tr>
 			        	</thead>
 			        	<tbody>
-			        		<tr>
-			        			<td>1</td>
-			        			<td>Audi</td>
-			        			<td>Q6</td>
-			        			<td>
-			        				<a class="btn btn-primary btn-sm" href="">Editar</a>
-			        				<a class="btn btn-danger btn-sm" href="">Eliminar</a>
-			        			</td>
-			        		</tr>
-			        		<tr>
-			        			<td>1</td>
-			        			<td>Audi</td>
-			        			<td>Q6</td>
-			        			<td>
-			        				<a class="btn btn-primary btn-sm" href="">Editar</a>
-			        				<a class="btn btn-danger btn-sm" href="">Eliminar</a>
-			        			</td>
-			        		</tr>
-			        		<tr>
-			        			<td>1</td>
-			        			<td>Audi</td>
-			        			<td>Q6</td>
-			        			<td>
-			        				<a class="btn btn-primary btn-sm" href="">Editar</a>
-			        				<a class="btn btn-danger btn-sm" href="">Eliminar</a>
-			        			</td>
-			        		</tr>
+							@foreach($cars as $car)
+								<tr>
+									<td>{{ $car->id }}</td>
+									<td><img src="{{ Storage::url($car->photo) }}" alt="" style="max-height:50px; max-width:50px"></td>
+									<td>{{ $car->model->brand->name }}</td>
+									<td>{{ $car->model->name }}</td>
+									<td>
+										<a href="/admin/autos/{{$car->id}}" class="btn btn-primary btn-sm">
+											Editar
+										</a>
+										<a href="/admin/autos/{{$car->id}}/eliminar" class="btn btn-danger btn-sm">
+											Eliminar
+										</a>
+									</td>
+								</tr>
+							@endforeach
 			        	</tbody>
 			        </table>
 		        </div>

@@ -8,28 +8,25 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">Crear un nuevo auto</div>
 		        <div class="panel-body">
-		        	<form method="POST" action="" enctype="multipart/form-data">
-		        		
+		        	<form method="POST" action="/admin/autos/crear" enctype="multipart/form-data">
+						{{ csrf_field() }}
 		        		<div class="form-group row">
-		        			<div class="col-md-4">
+		        			<div class="col-md-6">
 		        				<label for="year">Año</label>
 								<select class="form-control" name="year">
 									<option value="">Seleccionar...</option>
-									@for ($i = 2017; $i >= 1900; $i--)
-									<option value="{$i}}">{{ $i }}</option>
+									@for ($i = 2017; $i >= 1980; $i--)
+										<option value="{{$i}}">{{ $i }}</option>
 									@endfor
 								</select>
 		        			</div>
-		        			<div class="col-md-4">
-		        				<label for="brand">Marca</label>
-								<select class="form-control" name="brand">
-									<option value="">Seleccionar...</option>
-								</select>
-		        			</div>
-		        			<div class="col-md-4">
+		        			<div class="col-md-6">
 		        				<label for="model">Modelo</label>
-								<select class="form-control" name="model">
+								<select class="form-control" name="model_id">
 									<option value="">Seleccionar...</option>
+									@foreach($models as $model)
+										<option value="{{$model->id}}">{{ $model->name }}</option>
+									@endforeach
 								</select>
 		        			</div>
 						</div>
