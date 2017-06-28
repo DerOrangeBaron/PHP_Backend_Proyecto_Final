@@ -19,4 +19,4 @@ Route::get('autos/{id}', 'CarController@carDetailJson');
 
 Route::get('modelos', 'ModelController@listModelsJson');
 
-Route::get('marcas', 'BrandsController@listBrandsJson');
+Route::get('marcas', 'BrandController@listBrandsJson');

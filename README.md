@@ -19,24 +19,24 @@ A continuación se detallan aquellas rutas privadas:
 
 Método 		| Ruta        				| Controlador@función 		| Descripción  						   |
 ------------| --------------------------|---------------------------| -------------------------------------|
-| GET  		| /admin/autos 				|CarController@showList 	|Mostrar listado de autos 			   |
-| GET  		| /admin/autos/{id} 		|CarController@showEdit		|Mostrar formulario para editar un auto|
-| POST  	| /admin/autos/editar		|CarController@edit 		|Editar un auto 					   |
-| GET  		| /admin/autos/crear 		|CarController@showCreate	|Mostrar formulario para crear auto    |
-| POST  	| /admin/autos/crear 		|CarController@create 		|Crear un nuevo auto 				   |
-| GET  		| /admin/autos/{id}/eliminar|CarController@deleteCar	|Eliminar un auto 					   |
-| GET  		| /admin/marcas 			|BrandController@showList	|Mostrar listado de marcas			   |
-| GET  		| /admin/modelos 			|ModelController@showList	|Mostrar listado de modelos 		   |
+| GET  		| /admin/autos 				|AdminCarController@index 	|Mostrar listado de autos 			   |
+| GET  		| /admin/autos/crear 		|AdminCarController@create  |Mostrar formulario para crear auto    |
+| POST  	| /admin/autos/crear 		|AdminCarController@store	|Crear un nuevo auto 				   |
+| GET  		| /admin/autos/{id} 		|AdminCarController@edit	|Mostrar formulario para editar un auto|
+| POST  	| /admin/autos/{id}/editar	|AdminCarController@update 	|Editar un auto 					   |
+| GET  		| /admin/autos/{id}/eliminar|AdminCarController@delete	|Eliminar un auto 					   |
+| GET  		| /admin/marcas 			|BrandController@adminList	|Mostrar listado de marcas			   |
+| GET  		| /admin/modelos 			|ModelController@adminList	|Mostrar listado de modelos 		   |
 
 Rutas públicas:
 
-Método 	| Ruta        	| Controlador@función 			| Descripción  						|
-------	| ------------	|-------------------------------| ----------------------------------|
-GET 	| / 			| HomeController@showHome 		| Mostrar pantalla de inicio		|
-GET 	| /nosotros 	| HomeController@showAboutUs 	| Mostrar pantalla de nosotros		|
-GET 	| /ventas 		| CarController@showSales 		| Mostrar pantalla de ventas		|
-GET 	| /reservar/{id}| CarController@showSales 		| Mostrar pantalla de reserva 		|
-POST 	| /reservar		| CarController@showSales 		| Procesar reserva y enviar mail	|
+Método 	| Ruta        	| Controlador@función 			| Descripción                                       |
+------	| ------------	|-------------------------------| --------------------------------------------------|
+GET 	| / 			| PagesController@index 		| Mostrar pantalla de inicio                        |
+GET 	| /nosotros 	| PagesController@aboutUs 	    | Mostrar pantalla de nosotros                      |
+GET 	| /ventas 		| CarController@sales    		| Mostrar pantalla de ventas                        |
+GET 	| /reservar/{id}| CarController@showReserve		| Mostrar pantalla de reserva, con detalle de auto  |
+POST 	| /reservar		| CarController@reserve 		| Procesar reserva y enviar mail                    |
 
 Rutas API:
 
@@ -45,7 +45,7 @@ Método 	| Ruta        	| Controlador@función 				| Descripción  						|
 GET 	| /autos		| CarController@listCarsJson 		| Listar todos los autos en JSON		|
 GET 	| /autos/{id}	| CarController@carDetailJson 		| Listar detalle de un auto en JSON		|
 GET 	| /modelos 		| ModelController@listModelsJson 	| Listar todos los modelos en JSON		|
-GET 	| /marcas 		| BrandsController@listBrandsJson 	| Listar todas las marcas en JSON		|
+GET 	| /marcas 		| BrandController@listBrandsJson 	| Listar todas las marcas en JSON		|
 
 
 ## Configuración
@@ -91,8 +91,8 @@ Se incluyen además los siguientes seeds auxiliares que permiten insertar regist
   * Agregar autenticación (registro y login de usuarios)
   * Proteger las rutas que comiencen con ``/admin``
   * Crear modelo ``Car``, 
-  * Crear migración para crear la tabla ``cars``, La cual debe tener: year, model, price, description, photo, created_at, updated_at
-  * Ejecutar seed para rellenar tabla de autos (FALTA HACER!!)
+  * Crear migración para crear la tabla ``cars``, La cual debe tener: `year, model, price, description, photo, created_at, updated_at`
+  * Ejecutar seed para rellenar tabla de autos, ejecutando `php artisan db:seed --class=CarsTableSeeder`
   * Implementar el listado de `cars`, en el Admin
   * Implementar ABM (Alta, Baja y Modificación de autos). Recordar que al editar una `car`, si la imagen se modifica hay que eliminar la imagen anterior
 

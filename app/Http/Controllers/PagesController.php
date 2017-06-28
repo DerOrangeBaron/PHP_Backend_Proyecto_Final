@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     
-    public function showHome()
+    public function index()
     {
     	# code...
     }
 
-    public function showAboutUs()
+    public function aboutUs()
     {
     	# code...
     }
