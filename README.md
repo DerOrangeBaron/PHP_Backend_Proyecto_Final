@@ -47,7 +47,7 @@ Para instalar el proyecto seguir los siguientes pasos:
 2. Instalar dependencias (/vendor) utilizando Composer desde  consola. Ejecutar comando: ``composer install``
 
 
-3. Crear una base de datos utilizando phpMyAdmin llamada ``HAProyecto_Final``
+3. Crear una base de datos utilizando phpMyAdmin llamada ``HA_Proyecto_Final``
 
 
 4. Revisar archivo .env (en la raiz del proyecto), y asegurarse que el valor de ``DB_DATABASE`` coincida con el nombre de la base de datos recien creada (``HA_Proyecto_Final``).
