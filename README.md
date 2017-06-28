@@ -99,6 +99,10 @@ Para instalar el proyecto seguir los siguientes pasos:
 6. Levantar servidor utilizando el comando: ``php artisan serve``
 
 
+
+7. Installar el paquete Laravel Debugbar (Buscarlo en google)
+
+
 ## Migrations
 
 
