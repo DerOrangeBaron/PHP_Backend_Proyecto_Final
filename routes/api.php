@@ -13,10 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('autos', 'CarController@listCarsJson');
+Route::get('autos', 'CarController@listJson');
 
-Route::get('autos/{id}', 'CarController@carDetailJson');
+Route::get('autos/{id}', 'CarController@showJson');
 
-Route::get('modelos', 'ModelController@listModelsJson');
+Route::get('modelos', 'ModelController@listJson');
 
-Route::get('marcas', 'BrandController@listBrandsJson');
+Route::get('marcas', 'BrandController@listJson');

@@ -57,10 +57,10 @@ Rutas API:
 
 Método     | Ruta         | Controlador@función           | Descripción                     |
 ------ | ------------ |-------------------------------   | ----------------------------------|
-GET    | /autos      | CarController@listCarsJson      | Listar todos los autos en JSON      |
-GET    | /autos/{id}  | CarController@carDetailJson     | Listar detalle de un auto en JSON       |
-GET    | /modelos        | ModelController@listModelsJson   | Listar todos los modelos en JSON    |
-GET    | /marcas     | BrandController@listBrandsJson   | Listar todas las marcas en JSON     |
+GET    | /autos      | CarController@listJson      | Listar todos los autos en JSON      |
+GET    | /autos/{id}  | CarController@showJson     | Listar detalle de un auto en JSON       |
+GET    | /modelos        | ModelController@listJson   | Listar todos los modelos en JSON    |
+GET    | /marcas     | BrandController@listJson   | Listar todas las marcas en JSON     |
 
 
 

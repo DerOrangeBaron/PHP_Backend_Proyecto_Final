@@ -37,7 +37,7 @@ Route::get('admin/modelos', 'ModelController@adminList');
 
 Route::get('', 'PagesController@index');
 
-Route::get('nosotros', 'PagesController@showAboutUs');
+Route::get('nosotros', 'PagesController@aboutUs');
 
 Route::post('contacto', 'PagesController@sendContact');
 

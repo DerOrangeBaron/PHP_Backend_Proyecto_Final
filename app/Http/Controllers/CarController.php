@@ -7,48 +7,29 @@ use Illuminate\Http\Request;
 class CarController extends Controller
 {
     
-    public function showList()
+
+    public function sales(Request $request)
     {
     	# code...
     }
-
-    public function showEdit($id)
+    
+    public function showReserve(Request $request, $id)
     {
-    	# code...
+        # code...
     }
-
-    public function edit(Request $request)
+    
+    public function reserve(Request $request, $id)
     {
-    	# code...
+        # code...
     }
-
-    public function showCreate()
-    {
-    	# code...
-    }
-
-    public function create(Request $request)
-    {
-    	# code...
-    }
-
-    public function deleteCar($id)
-    {
-    	# code...
-    }
-
-    public function showSales(Request $request)
-    {
-    	# code...
-    }
-
-
-    public function carDetailJson($id)
+    
+    
+    public function listJson(Request $request)
     {
         # code...
     }
 
-    public function listCarsJson($id)
+    public function detailJson($id)
     {
         # code...
     }

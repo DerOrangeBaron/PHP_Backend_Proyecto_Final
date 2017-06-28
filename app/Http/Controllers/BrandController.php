@@ -7,13 +7,13 @@ use App\Brand;
 
 class BrandController extends Controller
 {
-    public function showList()
+    public function adminList()
     {
     	$brands = Brand::all();
     	return view('admin.brandsList', ['brands' => $brands]);
     }
 
-    public function listBrandsJson()
+    public function listJson()
     {
     	# code...
     }
