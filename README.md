@@ -134,6 +134,7 @@ Se incluyen además los siguientes seeds auxiliares que permiten insertar regist
    * Ejecutar seed para rellenar tabla de autos, ejecutando `php artisan db:seed --class=CarsTableSeeder`
    * Implementar el listado de `cars`, en el Admin.
    * Implementar ABM (Alta, Baja y Modificación de autos). Recordar que al editar una `car`, si la imagen se modifica hay que eliminar la imagen anterior.
+   * Agregar validacion a los formularios de creación y edición de autos. Todos los campos deben ser requeridos. En caso de algun error en la validación, mostrarlos en pantalla.
 
 
 2. Implementar funcionalidades para sección pública sitio:
@@ -144,6 +145,7 @@ Se incluyen además los siguientes seeds auxiliares que permiten insertar regist
    * Implementar la reserva de auto
      * Mostrar el formulario con el detalle del auto seleccionado ``(id)``
      * Al enviar el formulario, se debe mandar un email con la información de la persona.
+     * Agregar validación al formulario, todos los campos deben ser requeridos y el campo de E-mail debe cumplir con el formato ``ejemplo@email.com``. En caso de algun error en la validación, mostrarlos en pantalla.
      * Se debe eliminar el auto de forma lógica.
 
 
