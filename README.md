@@ -75,33 +75,41 @@ Para instalar el proyecto seguir los siguientes pasos:
 
 
 
-
-2. Instalar dependencias (/vendor) utilizando Composer desde  consola. Ejecutar comando: ``composer install``
-
+2. Crear el .env en base al contenido del .env.example (Copiarlo)
 
 
 
-3. Crear una base de datos utilizando phpMyAdmin llamada ``HA_Proyecto_Final``
+3. Ejecutar `php artisan key:generate`
 
 
 
 
-4. Revisar archivo .env (en la raíz del proyecto), y asegurarse que el valor de ``DB_DATABASE`` coincida con el nombre de la base de datos recién creada (``HA_Proyecto_Final``).
+4. Instalar dependencias (/vendor) utilizando Composer desde  consola. Ejecutar comando: ``composer install``
 
 
 
 
-5. Editar los valores de ``DB_USERNAME`` y ``DB_PASSWORD`` según corresponda de acuerdo al sistema del usuario. Normalmente se utiliza ``DB_USERNAME=root`` y ``DB_PASSWORD=(vacío)``
+5. Crear una base de datos utilizando phpMyAdmin llamada ``HA_Proyecto_Final``
 
 
 
 
-6. Installar el paquete Laravel Debugbar (Buscarlo en Google)
+6. Revisar archivo .env (en la raíz del proyecto), y asegurarse que el valor de ``DB_DATABASE`` coincida con el nombre de la base de datos recién creada (``HA_Proyecto_Final``).
 
 
 
 
-7. Levantar servidor utilizando el comando: ``php artisan serve``
+7. Editar los valores de ``DB_USERNAME`` y ``DB_PASSWORD`` según corresponda de acuerdo al sistema del usuario. Normalmente se utiliza ``DB_USERNAME=root`` y ``DB_PASSWORD=(vacío)``
+
+
+
+
+8. Installar el paquete Laravel Debugbar (Buscarlo en Google)
+
+
+
+
+9. Levantar servidor utilizando el comando: ``php artisan serve``
 
 
 
