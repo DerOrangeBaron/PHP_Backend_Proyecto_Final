@@ -4,21 +4,13 @@
 ## Introducción
 
 
-El siguiente proyecto consiste en desarrollar un sitio completo para la Automotora VIP. Separaremos el trabajo en 3 partes:
-
+El siguiente proyecto consiste en desarrollar un sitio web completo para la Automotora VIP. El trabajo se separará en 3 partes:
 
 * Sección privada (admin): Solamente los usuarios autenticados podrán crear, editar y modificar autos y marcas.
 
+* Sección pública: Sitio público al visitante, donde se puede buscar autos por año, marca, modelo o texto, así como reservar un auto, o conocer acerca de la empresa.
 
-
-
-* Sección pública: Sitio publico al visitante, donde se puede buscar autos por año, marca o modelo, texto, así como reservar un auto, o conocer acerca de la empresa.
-
-
-
-
-* API para ser consumida por una aplicación externa.
-
+* API (REST) para ser consumida por una aplicación externa.
 
 
 
