@@ -122,7 +122,7 @@ Se incluyen además los siguientes seeds auxiliares que permiten insertar regist
 
 
 
-## Ejercicio (POR TERMINAR...)
+## Ejercicio
 
 
 
