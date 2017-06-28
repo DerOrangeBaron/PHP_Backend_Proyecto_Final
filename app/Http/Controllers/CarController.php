@@ -37,14 +37,10 @@ class CarController extends Controller
     	# code...
     }
 
-    public function showSales()
+    public function showSales(Request $request)
     {
     	# code...
     }
 
-    public function getSales(Request $request)
-    {
-    	# code...
-    }
 }
 

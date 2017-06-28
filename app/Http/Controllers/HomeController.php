@@ -17,11 +17,6 @@ class HomeController extends Controller
     	# code...
     }
 
-    public function showContact()
-    {
-    	# code...
-    }
-
     public function sendContact(Request $request)
     {
     	# code...

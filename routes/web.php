@@ -21,7 +21,7 @@ Route::post('admin/cars/edit', 'CarController@edit');
 
 Route::get('admin/cars/create', 'CarController@showCreate');
 
-Route::post('admin/cars/create', 'CarController@crete');
+Route::post('admin/cars/create', 'CarController@create');
 
 Route::get('admin/cars/{id}/eliminar', 'CarController@deleteCar');
 
@@ -43,8 +43,6 @@ Route::get('contacto', 'HomeController@showContact');
 Route::post('contacto', 'HomeController@sendContact');
 
 Route::get('ventas', 'CarController@showSales');
-
-Route::post('ventas', 'CarController@getSales');
 
 
 Route::get('test/admin/crear', function() {
