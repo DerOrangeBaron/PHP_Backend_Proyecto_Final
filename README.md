@@ -12,7 +12,7 @@ El siguiente proyecto consiste en desarrollar un sitio completo para la Automoto
 
 
 
-* Sección pública: Sitio publico al visitante, donde se puede buscar autos por año, marca o modelo, así como reservar un auto, o conocer acerca de la empresa.
+* Sección pública: Sitio publico al visitante, donde se puede buscar autos por año, marca o modelo, texto, así como reservar un auto, o conocer acerca de la empresa.
 
 
 
@@ -96,11 +96,14 @@ Para instalar el proyecto seguir los siguientes pasos:
 
 
 
-6. Levantar servidor utilizando el comando: ``php artisan serve``
+6. Installar el paquete Laravel Debugbar (Buscarlo en Google)
 
 
 
-7. Installar el paquete Laravel Debugbar (Buscarlo en google)
+
+7. Levantar servidor utilizando el comando: ``php artisan serve``
+
+
 
 
 ## Migrations
@@ -145,11 +148,11 @@ Se incluyen además los siguientes seeds auxiliares que permiten insertar regist
    * Implementar las páginas estáticas del sitio: `Home`, `About Us`
    * Implementar la sección ventas
      * Listado de autos con paginado.
-     * Filtrado de autos en pantalla ``/ventas``
+     * Filtrado de autos en pantalla ``/ventas``, mantener los filtros en el paginado
    * Implementar la reserva de auto
      * Mostrar el formulario con el detalle del auto seleccionado ``(id)``
      * Al enviar el formulario, se debe mandar un email con la información de la persona.
-   * Se debe eliminar el auto de forma lógica.
+     * Se debe eliminar el auto de forma lógica.
 
 
 3. Implementar una API REST
