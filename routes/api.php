@@ -13,6 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('autos', 'CarController@listCarsJson');
+
+Route::get('autos/{id}', 'CarController@carDetailJson');
+
+Route::get('modelos', 'ModelController@listModelsJson');
+
+Route::get('marcas', 'BrandsController@listBrandsJson');

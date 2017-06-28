@@ -13,21 +13,21 @@
 
 // ----  RUTAS DE ADMINISTRADOR ------ //
 
-Route::get('admin/cars', 'CarController@showList');
+Route::get('admin/autos', 'CarController@showList');
 
-Route::get('admin/cars/{id}', 'CarController@showEdit');
+Route::get('admin/autos/{id}', 'CarController@showEdit');
 
-Route::post('admin/cars/edit', 'CarController@edit');
+Route::post('admin/autos/editar', 'CarController@edit');
 
-Route::get('admin/cars/create', 'CarController@showCreate');
+Route::get('admin/autos/crear', 'CarController@showCreate');
 
-Route::post('admin/cars/create', 'CarController@create');
+Route::post('admin/autos/crear', 'CarController@create');
 
-Route::get('admin/cars/{id}/eliminar', 'CarController@deleteCar');
+Route::get('admin/autos/{id}/eliminar', 'CarController@deleteCar');
 
-Route::get('admin/brands', 'BrandController@showList');
+Route::get('admin/marcas', 'BrandController@showList');
 
-Route::get('admin/models', 'ModelController@showList');
+Route::get('admin/modelos', 'ModelController@showList');
 
 
 
@@ -38,21 +38,14 @@ Route::get('', 'HomeController@showHome');
 
 Route::get('nosotros', 'HomeController@showAboutUs');
 
-Route::get('contacto', 'HomeController@showContact');
-
 Route::post('contacto', 'HomeController@sendContact');
 
 Route::get('ventas', 'CarController@showSales');
 
+Route::get('reservar/{id}', 'HomeController@showReserve');
 
-Route::get('test/admin/crear', function() {
-    return view('admin.carCreateForm');
-});
+Route::post('reservar', 'HomeController@reserve');
 
-Route::get('test/admin/lista', function() {
-    return view('admin.carList');
-});
-
-Route::get('test/admin/editar', function() {
-    return view('admin.carEditForm');
+Route::get('test', function() {
+    return view('web.sales');
 });
